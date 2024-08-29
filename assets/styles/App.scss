@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.toggle-sidebar-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 40px;
+  overflow: hidden;
+}
+
+.toggle-sidebar-btn.closed {
+  right: 0;
+  width: 40px;
+}
+
+.toggle-sidebar-btn.open {
+  right: calc(25% + 1rem);
+  width: 40px;
+}
+
+body{
+  font-family: 'Calibri', sans-serif !important;
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background: linear-gradient(45deg, #030303, #3b4856);
+  background-attachment: fixed;
+  color: white;
+}
+
+.nav.nav-tabs{
+  margin-left: 0.65em; 
+
+  .nav-link.active {
+    background: none !important;
+  }
+}
+
+@media screen and (max-width: 80em){
+  :root{
+    font-size: calc(10px);
+  }
+}

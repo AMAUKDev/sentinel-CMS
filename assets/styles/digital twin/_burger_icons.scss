@@ -1,0 +1,38 @@
+.burger-bar-1 {
+  @include burger-icon;
+  @include burger-icon-transform(-50deg, 0px);
+
+  &.a {
+    @include burger-icon-transform(0, -5px);
+  }
+
+  &.dark {
+    background-color: white;
+  }
+}
+
+.burger-bar-2 {
+  @include burger-icon;
+  opacity: 0;
+
+  &.b {
+    opacity: 0.5;
+  }
+
+  &.dark {
+    background-color: white;
+  }
+}
+
+.burger-bar-3 {
+  @include burger-icon;
+  @include burger-icon-transform(50deg, 0px);
+
+  &.c {
+    @include burger-icon-transform(0, 5px); /* Translate icon 3 down by 10 pixels */
+  }
+
+  &.dark {
+    background-color: white;
+  }
+}

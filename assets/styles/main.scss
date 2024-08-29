@@ -1,0 +1,27 @@
+// Main App
+@import './App.scss';
+
+// Partials
+@import './variables/main-content-vars';
+@import './variables/dashboard-vars';
+// Themes
+@import './variables/theme-vars';
+
+// Themes
+@import './variables/theme-vars';
+
+// // Mixins
+@import './digital twin/mixins/mixins';
+
+// Digital Twin
+@import './digital twin/ama-navbar';
+@import './digital twin/burger_icons';
+@import './digital twin/contact';
+@import './digital twin/dashboard';
+@import './digital twin/authorisation';
+@import './digital twin/graphic';
+@import './digital twin/selection-area';
+@import './digital twin/tabs';
+
+// Bootstrap and third party
+@import "bootstrap";

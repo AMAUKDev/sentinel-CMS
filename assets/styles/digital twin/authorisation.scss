@@ -1,0 +1,21 @@
+#account-management, #password-reset, #login-form, #register-form {
+  height: 100vh;
+  background-color: white;
+  color: black;
+}
+
+.info-input {
+  margin-bottom: 5%;
+}
+
+#login-form > .login-form-inputs, 
+#register-form > .register-form-inputs {
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  #login-form > .login-form-inputs, 
+  #register-form > .register-form-inputs {
+    width: 100%;
+  }
+}

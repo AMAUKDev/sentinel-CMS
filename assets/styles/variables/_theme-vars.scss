@@ -1,0 +1,17 @@
+$primary: #06A5C4;
+$secondary: #828C96;
+$info: #4AC9A3;
+$success: #28A745;
+$warning: #FFCA00;
+$danger: #FF3B30;
+$lavender: #EEE5E9;
+
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --info: #{$info};
+  --success: #{$success};
+  --warning: #{$warning};
+  --danger: #{$danger};
+  --lavender: #{$lavender};
+}

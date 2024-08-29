@@ -1,0 +1,73 @@
+/* Mixins */
+@mixin transition($property) {
+  transition: $property $transition-duration ease-in-out;
+}
+
+@mixin sidebar($width) {
+  width: $width;
+  @include transition(width);
+}
+
+@mixin page-content($margin, $width) {
+  margin-left: $margin;
+  width: $width;
+  @include transition(margin-left);
+}
+
+@mixin transform($translateX, $translateY) {
+  transform: translateY($translateY) translateX($translateX);
+}
+
+// Mixin for setting icon dimensions
+@mixin icon-dimensions($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin burger-icon-transform($rotation, $translateY) {
+  transform: translateY($translateY) rotate($rotation);
+}
+
+@mixin burger-icon {
+  position: absolute;
+  width: 15px; /* Default width for mobile */
+  height: 0.15em; /* Default height for mobile */
+  background-color: black;
+  opacity: 0.5;
+  border-radius: 10px;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    width: 15px;
+    height: 0.18em;
+    border-radius: 8px;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    width: 15px;
+    height: 0.17em;
+    border-radius: 10px;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    width: 15px;
+    height: 0.19em;
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1280px) {
+    width: 20px;
+    height: 0.15em;
+    border-radius: 14px;
+  }
+
+  // Extra extra large devices (larger desktops, 1400px and up)
+  @media (min-width: 1400px) {
+    width: 22.5px;
+    height: 0.15em;
+    border-radius: 10px;
+  }
+}
+

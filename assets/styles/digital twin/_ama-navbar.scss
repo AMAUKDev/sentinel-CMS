@@ -1,0 +1,90 @@
+// Sidebar content
+.sidebar-content {
+  height: 100vh;
+}
+
+// Sidebar styles
+.sidebar {
+  transition: width $transition-duration ease; // Use variables for transition properties
+}
+
+.dark-mode-icon {
+  @include icon-dimensions(25px);
+  transition: color 1s ease;
+}
+
+.sun {
+  color: #ffc107; /* Light mode color */
+}
+
+.moon {
+  color: #343a40; /* Dark mode color */
+}
+
+
+// Navigation item list styles
+.nav-item-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  list-style: none;
+  
+  // Individual list item styles
+  li {
+    text-align: start;
+    margin-top: 16px;
+    display: flex;
+  }
+}
+
+// Profile icon styles
+.profile-icon {
+  margin-bottom: 5%;
+}
+
+.text-wrap {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+// Logo styles
+#logo {
+  @include icon-dimensions(70%);
+
+  @media screen and (min-width: 576px) {
+    @include icon-dimensions(60%);
+  }
+  
+  // Media query for larger screens
+  @media screen and (min-width: 992px) {
+    @include icon-dimensions(60%);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include icon-dimensions(50%);
+  }
+}
+
+// Login icon styles
+#login-icon {
+  @include icon-dimensions(50%); // Use mixin for setting icon dimensions
+
+  @media screen and (min-width: 576px) {
+    @include icon-dimensions(25%);
+  }
+
+  @media screen and (min-width: 992px) {
+    @include icon-dimensions(30%);
+  }
+  
+  // Media query for larger screens
+  @media screen and (min-width: 1200px) {
+    @include icon-dimensions(40%)
+  }
+  
+  // Media query for even larger screens
+  @media screen and (min-width: 1600px) {
+    @include icon-dimensions(30%)
+  }
+}

@@ -1,0 +1,11 @@
+#graphic-container {
+  width: 0;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  #graphic-container {
+    width: 83%;
+    visibility: visible;
+  }
+}

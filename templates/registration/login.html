@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 px-0" id="graphic-container"> 
+      <!-- Image taking up 2/3 of the page -->
+      <img src="{% static 'images/graphic.jpeg' %}" alt="background of ships" width="100%" height="100%">
+    </div>
+    <div class="col-md-2 d-flex justify-content-center flex-column align-items-center" id="login-form">
+      <!-- Login form taking up 1/3 of the page -->
+      <div class="text-center mt-4 mb-2">
+        <div class="image-container">
+            <img src="{% static 'images/logo.png' %}" alt="logo" width="50%">
+        </div>
+        <h2 class="mx-4">Welcome To Pipeclam</h2>
+      </div>
+
+      <form method="POST" action="." class="d-flex flex-column align-items-center login-form-inputs">
+        {% csrf_token %}
+
+        <div class="input-box">
+          {{ form.username }}
+          <box-icon class="icon" name='envelope' type='solid' ></box-icon>
+        </div>
+        <div class="input-box">
+          {{ form.password }}
+          <box-icon class="icon" type='solid' name='lock-alt'></box-icon>
+        </div>
+        <div class="container d-flex justify-content-center">
+          <input type="Submit" class="submit my-2 btn btn-primary" value="Login">
+        </div>
+        {% for field, error in form.errors.items %}
+          <div class="alert alert-danger my-3 p-1" role="alert">
+            {{ error|striptags }}
+          </div>
+        {% endfor %}
+        <p>
+          Don't have an account? <a href="{% url 'users:signup' %}">Sign Up</a>
+        </p>
+        <p>
+          Forgot your password? <a href="{% url 'users:reset_password' %}">Reset it</a>
+        </p>
+        {{ approval_message }}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

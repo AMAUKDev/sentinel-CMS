@@ -1,0 +1,113 @@
+.dashboard-wrapper{
+  display: flex;
+  height: 100vh;
+}
+
+.page-content {
+  @include page-content($sidebarWidthOpenMobile, $pageWidthOpenMobile);
+
+  &.closed {
+    @include page-content($sidebarWidthClosedMobile, $pageWidthClosedMobile);
+  }
+
+  @media screen and (min-width: 768px) {
+    @include page-content(10%, 90%);
+
+    &.closed {
+      @include page-content(3%, 97%);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include page-content($sidebarWidthOpen, $pageWidthOpen);
+
+    &.closed {
+      @include page-content($sidebarWidthClosed, $pageWidthClosed);
+    }
+  }
+}
+
+.dashboard-sidebar-wrapper {
+  position: fixed;
+  height: 100%;
+  transition: width 0.5s ease-in-out; /* Add smooth transition */
+
+  @include sidebar($sidebarWidthOpenMobile);
+  border-right: 2px solid $border-color-light; /* Gray border with 0.25 opacity */
+
+  &.closed {
+    @include sidebar($sidebarWidthClosedMobile);
+  }
+
+  &.dark {
+    border-right: 2px solid $border-color-dark;
+  }
+
+  @media screen and (min-width: 576px) {
+    @include sidebar(20%);
+
+    &.closed {
+      @include sidebar(3%);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @include sidebar(10%);
+
+    &.closed {
+      @include sidebar(3%);
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    @include sidebar(10%);
+
+    &.closed {
+      @include sidebar(3%);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include sidebar($sidebarWidthOpen);
+
+    &.closed {
+      @include sidebar($sidebarWidthClosed);
+    }
+  }
+}
+
+.main-dashboard {
+  display: flex;
+  align-items: center; /* Align the icon vertically */
+  justify-content: center; /* Align the icon horizontally */
+  width: 20%; /* Adjust the width to increase the clickable area */
+  height: 3.5%; /* Adjust the height to increase the clickable area */
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all $transition-duration ease-in-out;
+  @include transform(175%, 0px); /* Apply transform mixin */
+  
+  &.open {
+    @include transform(350%, 0px); /* Apply the open state transform */
+  }
+
+  @media screen and (min-width: 576px) {
+    @include transform(200%, 0px); /* Apply transform mixin */
+    
+    &.open {
+      @include transform(400%, 0px); /* Apply transform mixin */
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include transform(200%, 0px); /* Apply transform mixin */
+    
+    &.open {
+      @include transform(400%, 0px); /* Apply transform mixin */
+    }
+  }
+}
+
+.dashboard-content {
+  margin-top: -3em;
+}
