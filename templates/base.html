@@ -6,11 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Website{% endblock %}</title>
+    <title>{% block title %}CMS Lite Vibration{% endblock %}</title>
     <!-- CSS files -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <!-- Additional head content -->
     {% block extra_head %}{% endblock %}
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
 
