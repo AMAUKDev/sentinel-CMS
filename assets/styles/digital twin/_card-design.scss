@@ -1,0 +1,42 @@
+.dt-card {
+  border: 1px solid rgba(0,0,0,.25);
+
+  > .card-header {
+    background-color: rgba($primary, .15);
+  }
+
+  .node-tooltip {
+    white-space: pre-line;
+  }
+
+  .alarm-dot {
+    cursor: pointer;
+    font-size: 30px;
+
+    &.alarm {
+      color: #FF0000;
+    }
+
+    &.no-alarm {
+      color: #00D100;
+    }
+
+    &.no-data {
+      color: #000000;
+    }
+  }
+
+  &.dark {
+    background: #1b1b1b;
+    border: 1px solid rgba(255,255,255,.25);
+
+    > .card-header {
+      background-color: #262626;
+    }
+
+    > * {
+      color: white;
+    }
+  }
+
+}

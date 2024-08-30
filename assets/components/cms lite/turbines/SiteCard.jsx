@@ -47,8 +47,6 @@ function SiteCard({ site, turbines }) {
         nodeAlarm = 'No alarm';
       }
     }
-
-    console.log(site, turbineKey, nodeKey, nodeAlarm);
   }
 
   const alarmKeyTooltip = (
@@ -85,7 +83,10 @@ function SiteCard({ site, turbines }) {
                         }
                         aria-label={`Alarm Status for ${toHumanReadable(nodeKey)}: ${alarms[nodeKey] === undefined ? 'No Data' : (alarms[nodeKey] ? 'Triggered' : 'No Alarm')}`}
                       >
-                        <p className={`alarm-dot mb-0 ${alarms[nodeKey] === undefined ? 'no-data' : (alarms[nodeKey] ? 'alarm' : 'no-alarm')}`} onClick={() => handleNodeInterpretation(site, turbineKey, nodeKey, alarms)} aria-label={alarms[nodeKey] === undefined ? 'No Data' : (alarms[nodeKey] ? 'Triggered' : 'No Alarm')}>
+                        <p
+                          className={`alarm-dot mb-0 ${alarms[nodeKey] === undefined ? 'no-data' : (alarms[nodeKey] ? 'alarm' : 'no-alarm')}`}
+                          onClick={() => handleNodeInterpretation(site, turbineKey, nodeKey, alarms)} aria-label={alarms[nodeKey] === undefined ? 'No Data' : (alarms[nodeKey] ? 'Triggered' : 'No Alarm')}
+                        >
                           &#8226;
                         </p>
                       </OverlayTrigger>
@@ -93,7 +94,7 @@ function SiteCard({ site, turbines }) {
                   )
                 ))}
                 <Col xs={4} className="d-flex align-items-center">
-                  <Button variant={`outline-${isDarkMode ? 'light' : 'dark'}`} aria-label="View Button">View</Button>
+                  <Button variant={`outline-${isDarkMode ? 'light' : 'primary'}`} aria-label="View Button">View</Button>
                 </Col>
               </Row>
             </div>
