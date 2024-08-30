@@ -1,8 +1,10 @@
+from django import forms
 from django.contrib.auth.forms import (
     UserCreationForm,
     AuthenticationForm,
     PasswordChangeForm
 )
+
 from users.models import CustomUser as User
 
 
@@ -57,6 +59,15 @@ class SignUpForm(UserCreationForm):
             "class": "form-control info-input",
             "required": "required",
         })
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if User.objects.filter(email=email).exists():
+            raise forms.ValidationError(
+                "A user with this email address is already registered." + "\n"
+                "Please use a different email."
+            )
+        return email
 
     class Meta:
         model = User
