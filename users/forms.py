@@ -16,7 +16,7 @@ class SignUpForm(UserCreationForm):
             "placeholder": "Email",
             "minlength": 6,
             "maxlength": 100,
-            "class": "form-input",
+            "class": "form-control info-input",
             "required": "required",
         })
         self.fields["password1"].widget.attrs.update({
@@ -26,7 +26,7 @@ class SignUpForm(UserCreationForm):
             "placeholder": "Password",
             "minlength": 8,
             "maxlength": 50,
-            "class": "form-input",
+            "class": "form-control info-input",
             "required": "required",
         })
         self.fields["password2"].widget.attrs.update({
@@ -36,7 +36,7 @@ class SignUpForm(UserCreationForm):
             "placeholder": "Re-Type Password",
             "minlength": 8,
             "maxlength": 50,
-            "class": "form-input",
+            "class": "form-control info-input",
             "required": "required",
         })
         self.fields["first_name"].widget.attrs.update({
@@ -45,7 +45,7 @@ class SignUpForm(UserCreationForm):
             "name": "first_name",
             "placeholder": "First Name",
             "maxlength": 75,
-            "class": "form-input",
+            "class": "form-control info-input",
             "required": "required",
         })
         self.fields["last_name"].widget.attrs.update({
@@ -54,7 +54,7 @@ class SignUpForm(UserCreationForm):
             "name": "last_name",
             "placeholder": "Last Name",
             "maxlength": 75,
-            "class": "form-input",
+            "class": "form-control info-input",
             "required": "required",
         })
 
@@ -80,7 +80,7 @@ class LoginForm(AuthenticationForm):
             "placeholder": "Email",
             "minlength": 6,
             "maxlength": 100,
-            "class": "form-input",
+            "class": "form-control info-input",
             "required": "required",
         })
         self.fields["password"].widget.attrs.update({
@@ -90,7 +90,7 @@ class LoginForm(AuthenticationForm):
             "placeholder": "Password",
             "minlength": 8,
             "maxlength": 50,
-            "class": "form-input",
+            "class": "form-control info-input",
             "required": "required",
         })
 
@@ -112,7 +112,7 @@ class ChangePassword(PasswordChangeForm):
             "placeholder": "Current Password",
             "minlength": 8,
             "maxlength": 50,
-            "class": "form-input",
+            "class": "form-control info-input",
             "required": "required",
         })
         self.fields["new_password1"].widget.attrs.update({
@@ -122,7 +122,7 @@ class ChangePassword(PasswordChangeForm):
             "placeholder": "New Password",
             "minlength": 8,
             "maxlength": 50,
-            "class": "form-input",
+            "class": "form-control info-input",
             "required": "required",
         })
         self.fields["new_password2"].widget.attrs.update({
@@ -132,7 +132,7 @@ class ChangePassword(PasswordChangeForm):
             "placeholder": "Re-Type Password",
             "minlength": 8,
             "maxlength": 50,
-            "class": "form-input",
+            "class": "form-control info-input",
             "required": "required",
         })
 
