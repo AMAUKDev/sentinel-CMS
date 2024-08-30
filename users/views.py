@@ -13,7 +13,7 @@ User = get_user_model()
 
 @login_required
 def index(request):
-    return render(request, "index.html", {})
+    return render(request, "index.html")
 
 
 def redirect_to_cms(request):
@@ -46,7 +46,16 @@ def login_user(request):
         username = form.cleaned_data.get("username")
         password = form.cleaned_data.get("password")
         user = authenticate(username=username, password=password)
-        if user is not None:
+        if user is not None and user.approved:
             login(request, user)
-            return render(request, "index.html", {})
+            return redirect("users:index")
+        elif not user.approved:
+            form.add_error(
+                None,
+                (
+                    "Your account has not yet been activated, "
+                    "an administrator will activate your account shortly."
+                )
+            )
+
     return render(request, "registration/login.html", {"form": form})
