@@ -81,7 +81,7 @@ const InterpretationHandler = React.memo(({ data_in }) => {
    * @param {Object} props.pageData - Data related to the page.
    * @returns {JSX.Element} - The appropriate page component.
    */
-  const GetPageComponent = useCallback(({ pageId, pageType, pageData }) => {
+  const GetPageComponent = useCallback(({ pageId, pageType, pageData, data }) => {
     const sharedProps = {
       interpretationCallback, // Pass the callback to the widget
       pageId,
@@ -92,6 +92,7 @@ const InterpretationHandler = React.memo(({ data_in }) => {
       case 'default_page':
         return <DefaultPage {...sharedProps} />;
         case 'cmslite_summary_page':
+          console.log(pageData);
           sharedProps['pageData']['data_json'] = data['data_json'];
           sharedProps['pageData']['suitable_node_paths_by_high_level_node_path'] = data['suitable_node_paths_by_high_level_node_path'];
           return <CMSLiteSummaryPage {...sharedProps} />;
@@ -110,7 +111,7 @@ const InterpretationHandler = React.memo(({ data_in }) => {
         {Object.entries(data_in.pages).map(([pageKey, page]) => (
           <Tab eventKey={pageKey} title={page.title} key={pageKey}>
             {/* Render the appropriate page component based on the page type */}
-            <GetPageComponent pageId={`${data_in.job_id}_${pageKey}`} pageType={page.page_type} pageData={page} />
+            <GetPageComponent pageId={`${data_in.job_id}_${pageKey}`} pageType={page.page_type} pageData={page} data={data_in} />
           </Tab>
         ))}
       </Tabs>
