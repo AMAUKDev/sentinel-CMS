@@ -1,0 +1,55 @@
+{
+  "job_id": "6cd2b171-c289-40a9-b1a2-5f81ba38a382",
+  "tab_name": "CMSLite Turbine Summary",
+  "interpretation_key": "CMSLiteTurbineSummary",
+  "interpretation_kwargs": {
+      "entity_ids": [
+          "65a15f102026225915d69869",
+          "65a15f16cd17671a4a2a2c40",
+          "65a15f17cd17671a4a2a2c66",
+          "65a15f17cd17671a4a2a2c7f"
+      ],
+      "monitor_ids": [],
+      "node_ids": [
+          "65a15f102026225915d69869",
+          "65a15f16cd17671a4a2a2c40",
+          "65a15f17cd17671a4a2a2c66",
+          "65a15f17cd17671a4a2a2c7f"
+      ],
+      "start_datetime": "2024-02-01T00:00:00.000Z",
+      "end_datetime": "2024-02-14T00:00:00.000Z",
+      "interpretation_key": "CMSLiteTurbineSummary"
+  },
+  "pages": {
+      "cmslite_turbines_summary": {
+          "title": "Summary of all turbines",
+          "description": "High level summary of all turbines",
+          "page_type": "cmslite_summary_page",
+          "sections": {}
+      }
+  },
+  "data_json": "{\"high_level_node_path\":{\"0\":\"Haverigg\\/T2\",\"1\":\"Haverigg\\/T2\",\"2\":\"Haverigg\\/T2\",\"3\":\"Haverigg\\/T2\",\"4\":\"Haverigg\\/T3\",\"5\":\"Haverigg\\/T3\",\"6\":\"Haverigg\\/T3\",\"7\":\"Winscales-2\\/T3\",\"8\":\"Winscales-2\\/T3\",\"9\":\"Winscales-2\\/T3\",\"10\":\"Winscales-2\\/T7\",\"11\":\"Winscales-2\\/T7\",\"12\":\"Winscales-2\\/T7\"},\"monitor_node_type_path\":{\"0\":\"wind_turbine\\/vestas_v52\\/gearbox\\/gb_housing_gs\",\"1\":\"wind_turbine\\/vestas_v52\\/gearbox\\/gb_housing_rs\",\"2\":\"wind_turbine\\/vestas_v52\\/generator\\/gen_bearing_de\",\"3\":\"wind_turbine\\/vestas_v52\\/mb-gs\",\"4\":\"wind_turbine\\/vestas_v52\\/gearbox\\/gb_housing_gs\",\"5\":\"wind_turbine\\/vestas_v52\\/gearbox\\/gb_housing_rs\",\"6\":\"wind_turbine\\/vestas_v52\\/mb-gs\",\"7\":\"wind_turbine\\/vestas_v52\\/gearbox\\/gb_housing_gs\",\"8\":\"wind_turbine\\/vestas_v52\\/generator\\/gen_bearing_de\",\"9\":\"wind_turbine\\/vestas_v52\\/mb-gs\",\"10\":\"wind_turbine\\/vestas_v52\\/gearbox\\/gb_housing_gs\",\"11\":\"wind_turbine\\/vestas_v52\\/gearbox\\/gb_housing_rs\",\"12\":\"wind_turbine\\/vestas_v52\\/mb-gs\"},\"threshold_exceeded\":{\"0\":0.0,\"1\":0.0006480881,\"2\":0.0,\"3\":0.001369863,\"4\":0.0,\"5\":0.0,\"6\":0.0,\"7\":0.0061898212,\"8\":0.0097451274,\"9\":0.002734108,\"10\":0.0117370892,\"11\":0.0101596517,\"12\":0.0},\"percentage\":{\"0\":0.0,\"1\":0.064808814,\"2\":0.0,\"3\":0.1369863014,\"4\":0.0,\"5\":0.0,\"6\":0.0,\"7\":0.6189821183,\"8\":0.9745127436,\"9\":0.2734107997,\"10\":1.1737089202,\"11\":1.0159651669,\"12\":0.0}}",
+  "suitable_node_paths_by_high_level_node_path": {
+      "Winscales-2/T3": [
+          "Winscales-2/T3/VESTAS_V52/Rotor_Nacelle/Nacelle/Gearbox/GB_Housing_RS",
+          "Winscales-2/T3/VESTAS_V52/Rotor_Nacelle/Nacelle/Gearbox/GB_Housing_GS",
+          "Winscales-2/T3/VESTAS_V52/Rotor_Nacelle/Nacelle/Drivetrain/LS_Assembly/MB-GS"
+      ],
+      "Winscales-2/T7": [
+          "Winscales-2/T7/VESTAS_V52/Rotor_Nacelle/Nacelle/Gearbox/GB_Housing_RS",
+          "Winscales-2/T7/VESTAS_V52/Rotor_Nacelle/Nacelle/Gearbox/GB_Housing_GS",
+          "Winscales-2/T7/VESTAS_V52/Rotor_Nacelle/Nacelle/Drivetrain/LS_Assembly/MB-GS"
+      ],
+      "Haverigg/T2": [
+          "Haverigg/T2/VESTAS_V52/Rotor_Nacelle/Nacelle/Gearbox/GB_Housing_RS",
+          "Haverigg/T2/VESTAS_V52/Rotor_Nacelle/Nacelle/Gearbox/GB_Housing_GS",
+          "Haverigg/T2/VESTAS_V52/Rotor_Nacelle/Nacelle/Generator/Gen_Housing/Gen_Bearing_DE",
+          "Haverigg/T2/VESTAS_V52/Rotor_Nacelle/Nacelle/Drivetrain/LS_Assembly/MB-GS"
+      ],
+      "Haverigg/T3": [
+          "Haverigg/T3/VESTAS_V52/Rotor_Nacelle/Nacelle/Gearbox/GB_Housing_RS",
+          "Haverigg/T3/VESTAS_V52/Rotor_Nacelle/Nacelle/Gearbox/GB_Housing_GS",
+          "Haverigg/T3/VESTAS_V52/Rotor_Nacelle/Nacelle/Drivetrain/LS_Assembly/MB-GS"
+      ]
+  }
+}

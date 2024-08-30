@@ -1,0 +1,67 @@
+{
+    "job_id": "6c3b6d76-f4b9-41ce-a50a-2463dd9f7017",
+    "CMSLiteVibrationHealth": {
+        "interpretation_name": "CMSLite-Vibration Monitor Health",
+        "default_interpretation": false,
+        "nodes": [],
+        "monitors": [
+            {
+                "monitor_id": "CMSLite-Vibration_355523767636931",
+                "_id": "652696022f65c047082a31ac"
+            },
+            {
+                "monitor_id": "CMSLite-Vibration_355523767503495",
+                "_id": "652695fe88ed10a08c9d8f73"
+            },
+            {
+                "monitor_id": "CMSLite-Vibration_355523767632575",
+                "_id": "652695e087ec6e4711fccb61"
+            },
+            {
+                "monitor_id": "CMSLite-Vibration_355523767632799",
+                "_id": "6526960887ec6e4711fccb6f"
+            },
+            {
+                "monitor_id": "CMSLite-Vibration_355523767636972",
+                "_id": "652695ea0be32e70f03e765e"
+            },
+            {
+                "monitor_id": "CMSLite-Vibration_355523767635842",
+                "_id": "65269bce678c4c36387cbb4f"
+            },
+            {
+                "monitor_id": "CMSLite-Vibration_355523767630595",
+                "_id": "652695d988ed10a08c9d8f67"
+            },
+            {
+                "monitor_id": "CMSLite-Vibration_355523767632914",
+                "_id": "652695dd2f65c047082a31a1"
+            }
+        ],
+        "_ids": [
+            "652696022f65c047082a31ac",
+            "652695fe88ed10a08c9d8f73",
+            "652695e087ec6e4711fccb61",
+            "6526960887ec6e4711fccb6f",
+            "652695ea0be32e70f03e765e",
+            "65269bce678c4c36387cbb4f",
+            "652695d988ed10a08c9d8f67",
+            "652695dd2f65c047082a31a1"
+        ]
+    },
+    "PipeclamTracker": {
+        "interpretation_name": "Pipeclam Tracker (Map & Info)",
+        "default_interpretation": true,
+        "nodes": [
+            {
+                "node_path": "PipeLife/Tows/NORTHWIND/Pipe_1",
+                "_id": "654cbcd9b7720fb4e546e4ae",
+                "name": "Pipe_1"
+            }
+        ],
+        "monitors": [],
+        "_ids": [
+            "654cbcd9b7720fb4e546e4ae"
+        ]
+    }
+}

@@ -18,8 +18,29 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
+from . import views
+from core import request_logic, test_views
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('async_interpretations_view/',
+         views.async_interpretations_view,
+         name='async_interpretations_view'
+         ),
+    path("callback_view/",
+         request_logic.callback_view,
+         name="callback_view"
+         ),
+    path("check_request_status/",
+         request_logic.check_request_status,
+         name="check_request_status"
+         ),
+    path("test_get_interpretations/",
+         test_views.test_get_interpretations,
+         name="test_get_interpretations"),
+    path("test_display_interpretation/",
+         test_views.test_display_interpretation,
+         name="test_display_interpretation"),
+
     path('', include(("users.urls", "users"), "users")),
 ] + static(settings.STATIC_URL)

@@ -103,7 +103,7 @@ async def test_get_interpretations(request):
 
         callback_data = {}
         dir_path = "test_data"
-        file_name = "get_interpretations_callback_data.json"
+        file_name = "new_cms_lite.json"
         file_path = os.path.join(dir_path, file_name)
 
         with open(file_path, "r") as f:
@@ -230,7 +230,7 @@ async def test_display_interpretation(request):
             user_kwargs["user_interest_tags"] = await fetch_user_interest_tags(
                 request.user
             )
-
+        print('cunt', user_kwargs)
         all_kwargs = {**extra_payload, **user_kwargs}
 
         logger.debug("test_display_interpretation: "
@@ -242,9 +242,8 @@ async def test_display_interpretation(request):
         dir_path = "test_data"
 
         # change test data here
-        # file_name = "new_cms_lite.json"
 
-        file_name = "display_selected_interpretation_callback_data.json"
+        file_name = "new_cms_lite.json"
 
         file_path = os.path.join(dir_path, file_name)
         with open(file_path, "r") as f:

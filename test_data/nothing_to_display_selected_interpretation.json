@@ -1,0 +1,91 @@
+{
+    "job_id": "9a296fe2-39ab-4bc7-81a6-3b37207bf954",
+    "tab_name": "Pipeclam Tracker (Map & Info)",
+    "interpretation_key": "PipeclamTracker",
+    "interpretation_kwargs": {
+        "entity_ids": [
+            "65a15f18cd17671a4a2a2cac"
+        ],
+        "monitor_ids": [],
+        "node_ids": [
+            "65a15f18cd17671a4a2a2cac"
+        ],
+        "start_datetime": "2024-01-15T11:16:00.000Z",
+        "end_datetime": "2024-01-16T11:16:00.000Z",
+        "interpretation_key": "PipeclamTracker"
+    },
+    "pages": {
+        "map_view": {
+            "title": " Map View",
+            "page_type": "pipeclam_main_page",
+            "sections": {
+                "map": {
+                    "widgets": [
+                        {
+                            "type": "pipeclam_map",
+                            "options": {
+                                "title": "Pipeclam Map",
+                                "dict_by_id": {
+                                    "PipeclamAstrocastAPI_0": {}
+                                }
+                            }
+                        }
+                    ],
+                    "controls": []
+                }
+            }
+        },
+        "alarms_by_id": {
+            "title": "All Alarms",
+            "description": "All alarms for Pipeclams and Vessels",
+            "page_type": "default_page",
+            "sections": {
+                "alarms_timeline": {
+                    "title": "Alarms timeline",
+                    "widgets": [
+                        {
+                            "type": "timeline",
+                            "options": {
+                                "display_strs_by_id": {
+                                    "PipeclamAstrocastAPI_0": "PipeclamAstrocastAPI_0"
+                                },
+                                "title": "Alarm timeline",
+                                "x_title": "Time",
+                                "data_json": "[]"
+                            }
+                        }
+                    ],
+                    "controls": []
+                },
+                "alarms_display": {
+                    "title": "Alarms display",
+                    "widgets": [
+                        {
+                            "type": "alarms_container",
+                            "options": {
+                                "alarms": {
+                                    "PipeclamAstrocastAPI_0": {
+                                        "display_str": "PipeclamAstrocastAPI_0",
+                                        "alarms": []
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "controls": []
+                }
+            }
+        },
+        "device_information": {
+            "title": "Latest Device Information",
+            "description": "Latest health and supporting information for Pipeclams",
+            "page_type": "default_page",
+            "sections": {
+                "info": {
+                    "widgets": [],
+                    "controls": []
+                }
+            }
+        }
+    }
+}
